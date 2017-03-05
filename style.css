@@ -1,0 +1,65 @@
+/* CSS */
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.descr {
+  padding: 9px 14px;
+  margin-bottom: 14px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  border-radius: 4px;
+}
+.descr .header {
+  font-weight: bold;
+}
+
+.descr-box {display: inline-block; width:5px; height: 5px;}
+.red-border { border: 3px solid red;}
+.black-border { border: 3px solid black;}
+
+
+#process {
+  position: relative;
+}
+
+.pre {
+  white-space: pre;
+  font-family: monospace;
+}
+
+.cell {
+  display: block;
+  position: absolute;
+  border: 1px dotted;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  margin: 4px;
+  background-color: white;
+}
+
+.cell.compare {
+  border: 4px solid red;
+  background-color: initial;
+  margin: 1px;
+}
+
+.cell.max {
+  border: 4px solid black;
+  margin: 1px;
+}

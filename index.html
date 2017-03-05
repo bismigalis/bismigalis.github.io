@@ -1,1 +1,35 @@
-Hello World
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="http://127.0.0.1:8080/skewer"></script>
+  </head>
+  
+  <body>
+    <div class="container">
+      <h1>Сортировка методом пузырька</h1>
+      <div class="descr">
+        <div class="header">Инструкция</div>
+        <p><span class="red-border descr-box"></span> красной рамкой отмечены сравниваемые в данный момент числа</p>
+        <p><span class="black-border descr-box"></span> черной рамкой отмечены числа всплывшие на каждой итерации и не участвующие в дальнейших сравнениях</p>
+        <div class="body">Для старта нажмите на кнопку <button id="start-button">Start</button></div>
+      </div>
+      
+      <div id="app">
+        <div class="pre">Было : <span id="in"></span></div>
+        <div class="pre">Стало: <span id="out"></span></div>
+        <div id="process"></div>
+
+      </div>
+      
+      
+      <script src="https://code.jquery.com/jquery-3.1.1.js"
+			  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+			  crossorigin="anonymous"></script>
+	  
+      <script src="app.js"></script>
+      <script>main();</script>
+    </div>
+  </body>
+</html>
