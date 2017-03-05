@@ -143,12 +143,12 @@ function showArray(arr, where) {
 /**
  * Function that given an array of numbers and empty array, return sorted array
  * and in process of sorting records commands into the given array 'q'
- * @param {array} arr array of numbers
+ * @param {array} inArr array of numbers
  * @param {array} q empty array in which commands will be pushed in process of sorting
  * @return {array} sorted array
  */
-function sortArray(arr, q) {
-   var arr = arr.slice(), //copy array
+function sortArray(inArr, q) {
+   var arr = inArr.slice(), //copy array
        len = arr.length,
        temp = undefined;
 
