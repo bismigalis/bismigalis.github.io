@@ -224,8 +224,8 @@ function main() {
       },
       computed: {
          sanitized_array : function() {
-            var m = this.raw_array.match(/[,\d]/g);
-            return m ? m.join('').split(",").filter(Boolean).map(Number) : [];
+            var m = this.raw_array.match(/[\s\d]/g);
+            return m ? m.join('').split(/\s+/).filter(Boolean).map(Number) : [];
          }
       },
       methods: {

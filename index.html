@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="http://127.0.0.1:8080/skewer"></script> -->
+    <script src="http://127.0.0.1:8080/skewer"></script>
   </head>
   
   <body>
@@ -27,17 +27,17 @@
             <option value="generate">Генерировать список</option>
             <option value="enter">Задать список</option>
           </select>
-
-          <div v-show="array_init_method=='generate'">
-            <label>Количество элементов в списке:
+          <br><br>
+          <div class="generate-panel" v-show="array_init_method=='generate'">
+            <label>Количество элементов в списке:</label>
               <input type="radio" v-model="quantity_input" value="random">
               Сгенерировать случайно
               <input type="radio" v-model="quantity_input" value="manual">
               <input type="number" v-model.number="quantity" v-bind:disabled="quantity_input=='random'"
                      v-bind:min="QUANTITY_MIN" v-bind:max="QUANTITY_MAX" name="quantity">
-            </label>
-            <br>
-            <label>Диапазон возможных значений:
+            
+            <br><br>
+            <label>Диапазон возможных значений:</label>
               <input type="radio" v-model="range_input" value="random">
               Сгенерировать случайно
               <input type="radio" v-model="range_input" value="manual">
@@ -47,12 +47,12 @@
               <input name="range_to" type="number" v-model.number="range_to" title="To"
                      v-bind:disabled="range_input=='random'"
                      v-bind:min="range_from+1" v-bind:max="RANGE_TO">
-            </label>
+            
           </div>
         
           <div v-show="array_init_method=='enter'">
-            <p>
-              <textarea v-model="raw_array" placeholder="Задайте список минимум из двух чисел через запятую"></textarea>
+            <p>Задайте список чисел через пробел<br>
+              <textarea v-model="raw_array"></textarea>
             </p>
           </div>
         </fieldset>
