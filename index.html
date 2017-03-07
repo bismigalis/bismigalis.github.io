@@ -60,10 +60,11 @@
         </fieldset>
 
         <div id="controls"></div>
-        <button v-on:click="start_show" v-show="startShowButtonEnabled">Старт</button>
-        <button v-on:click="pause" v-show="pauseEnabled">{{ paused ? 'Старт':'Стоп' }}</button>
-        <button v-on:click="reset" v-show="resetEnabled">Сброс</button>
-        
+        <p>
+          <button v-on:click="start_show" v-show="startShowButtonEnabled">Старт</button>
+          <button v-on:click="pause" v-show="pauseEnabled">{{ paused ? 'Старт':'Стоп' }}</button>
+          <button v-on:click="reset" v-show="resetEnabled">Сброс</button>
+        </p>
         <p>
           <div v-if="in_array.length" class="pre">Было : <span>{{ in_array }}</span></div>
           <div v-if="out_array.length" class="pre">Стало: <span>{{ out_array }}</span></div>
